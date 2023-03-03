@@ -1,0 +1,32 @@
+{
+  "$id": "ce_headerFooter",
+  "filter": {
+    "entityIds": ["ce_globalLayouts"]
+  },
+  "source": "knowledgeGraph",
+  "fields": [
+    "name",
+    "c_waitroseHelpAndSupportSection",
+    "c_footerLogo",
+    "c_footerLogoText",
+    "c_usefulInformationSection",
+    "c_moreFromUsSection",
+    "c_aboutWaitroseSection",
+    "c_footerImage",
+    "c_visitOurMobileSiteTitle",
+    "c_copyrightTag",
+    "c_socialIcon",
+    "c_headerNav",
+    "c_headerMain",
+    "c_bookASlotCta",
+    "c_myTrolleyCta",
+    "c_bannerPhoto",
+    "c_bannerCta",
+    "c_bannerSlogan"
+    
+  ],
+  "localization": {
+    "locales": ["en"],
+    "primary": false
+  }
+}
