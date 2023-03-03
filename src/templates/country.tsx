@@ -315,7 +315,7 @@ const Country: Template<TemplateRenderProps> = ({
         {" "}
         <AnalyticsScopeProvider name={"header"}>
           <PageLayout global={_site}>
-            <BreadCrumbspstate
+            <BreadCrumbs
               name={name}
               baseUrl={relativePrefixToRoot}
               parents={dm_directoryParents}
