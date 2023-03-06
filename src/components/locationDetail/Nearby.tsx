@@ -146,7 +146,7 @@ export default function Nearby(props: any) {
                     buttonText={
                       props.c_getDirectionsCTAText
                         ? props.c_getDirectionsCTAText
-                        : "Get directions"
+                        : "GET DIRECTIONS"
                     }
                     address={location.data.address}
                     latitude={

@@ -26,6 +26,7 @@ const Footer = (props: DataOfProps) => {
   } = props;
 
   return (
+    <div className="container-custom mx-auto">
     <footer
       className="inline-block w-full
     bg-[#F9F9F9]  text-white"
@@ -189,6 +190,7 @@ const Footer = (props: DataOfProps) => {
       <p className="copyright">{c_copyrightTag}</p>
       {/* </div > */}
     </footer>
+    </div>
   );
 };
 

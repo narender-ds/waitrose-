@@ -271,6 +271,16 @@ body.menu-opened {
   @apply font-bold;
 }
 
+/*buttoncustom */
+.btnforDirection{    width: 9.75rem;
+  border-style: none;
+  --tw-bg-opacity: 1;
+  background-color: rgb(101 135 37 / var(--tw-bg-opacity));
+  font-family: futura_ptdemi,Georgia,Arial,sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));}
 /* banner sec */
 .banner-sec {
   @apply bg-gray-light py-16 mt-4;

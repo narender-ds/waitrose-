@@ -387,16 +387,16 @@ const City: Template<TemplateRenderProps> = ({
 
   return (
     <>
-      <JsonLd<Organization>
+      <JsonLd<Store>
         item={{
           "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "Waitrose's ",
+          "@type": "Store",
+          name: "Waitrose ",
           url: "https://www.waitrose.com/international/",
           logo: "https://www.waitrose.com.mx/en-US/images/logos/pji_arch_red_en.png",
           address: {
             "@type": "PostalAddress",
-            streetAddress: "Waitrose's ",
+            streetAddress: "Waitrose ",
             addressLocality: "Waitrose's International, Inc.",
             addressRegion: "Louisville",
             postalCode: "99900",

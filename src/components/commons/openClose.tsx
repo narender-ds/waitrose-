@@ -225,7 +225,7 @@ export const OpenStausFunctions = {
           <div className={"closeddot 4"}>
             <div className="red-dot">
               <div className="hours-info ">
-                <span className="font-second-main-font  text-[red]"> Closed - </span>
+                <span className="font-second-main-font font-bold text-[#000]"> Closed - </span>
                 {"Opens at "}
                 <span className="lowercase">
                   {OpenStausFunctions.formatTime(nextInterval.start).replace(
@@ -243,7 +243,7 @@ export const OpenStausFunctions = {
           <div className={"closeddot 3"}>
             <div className="red-dot">
               <div className="hours-info ">
-                <span className="font-second-main-font  text-[red] " >Closed - </span>
+                <span className="font-second-main-font font-bold text-[#000] " >Closed - </span>
                 {"Opens at "}
                 <span className="lowercase">
                   {OpenStausFunctions.formatTime(nextInterval.start).replace(
@@ -260,7 +260,7 @@ export const OpenStausFunctions = {
       return (
         <div className="closeddot 2">
           <div className="red-dot">
-            <div className="hours-info  text-[red] ">Closed</div>{" "}
+            <div className="hours-info  text-[#000] font-bold ">Closed</div>{" "}
           </div>
         </div>
       );

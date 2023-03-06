@@ -16,7 +16,7 @@ export default function Storefacility(props: services) {
   const { c_menuitems, title,Name } = props;
   return (
     <>
-    <div className="container-custom mx-auto">
+    {/* <div className="container-custom mx-auto"> */}
     { c_menuitems ? <div className="sec-title">
         <h2>{title}</h2>
         </div> : ""}
@@ -44,7 +44,7 @@ export default function Storefacility(props: services) {
       ) : (
         ""
       )}
-      </div>
+      {/* </div> */}
     </>
   );
 }

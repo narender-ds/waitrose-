@@ -88,7 +88,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
       "Get the real Waitrose's taste now – order fresh cooked pizza, sides, drinks and desserts online for delivery or takeaway. Better ingredients. Better pizza";
   let metaTitle = document.c_metaTitle
     ? document.c_metaTitle
-    : "Visit " + document.name + " | Order Pizza: Delivery Or Takeaway | ";
+    : "Visit " + document.name + " | Order Items: Delivery | ";
 
   return {
     title: metaTitle,
@@ -272,10 +272,10 @@ const Country: Template<TemplateRenderProps> = ({
 
   return (
     <>
-      <JsonLd<Organization>
+      <JsonLd<Store>
         item={{
           "@context": "https://schema.org",
-          "@type": "Organization",
+          "@type": "Store",
           name: "Waitrose",
           url: "https://www.waitrose.com/international/",
           logo: "https://www.waitrose.com.mx/en-US/images/logos/pji_arch_red_en.png",

@@ -180,7 +180,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   return {
     title: document.c_meta_title
       ? document.c_meta_title
-      : `${document.name} Connected Kerb Store`,
+      : `${document.name} Store`,
     charset: "UTF-8",
     viewport: "width=device-width, initial-scale=1",
     tags: [
@@ -191,7 +191,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
           content: `${
             document.c_meta_description
               ? document.c_meta_description
-              : `Find the ${document.name} Connected Kerb ${document.address.city}. We stock high-quality, robust products at competitive rates.`
+              : `Find the ${document.name} Store ${document.address.city}. We stock high-quality, robust products at competitive rates.`
           }`,
         },
       },
@@ -227,7 +227,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
           content: `${
             document.c_meta_description
               ? document.c_meta_description
-              : `Find the ${document.name} Connected Kerb ${document.address.city}. products at competitive rates.`
+              : `Find the ${document.name} Store ${document.address.city}. products at competitive rates.`
           }`,
         },
       },
@@ -265,7 +265,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
           name: "twitter:title",
           content: document.c_meta_title
             ? document.c_meta_title
-            : `${document.name}  Connected Kerb Store`,
+            : `${document.name}   Store`,
         },
       },
       {
@@ -275,7 +275,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
           content: `${
             document.c_meta_description
               ? document.c_meta_description
-              : `Find the ${document.name} Connected Kerb ${document.address.city}. products at competitive rates.`
+              : `Find the ${document.name} Store ${document.address.city}. products at competitive rates.`
           }`,
         },
       },
@@ -626,12 +626,14 @@ const Location: Template<ExternalApiRenderData> = ({
                 // title={c_surveyTitle}
               />
             </div>
+            <div className="container-custom mx-auto">
             <div className="mt-[80px] ">
               <Services
                 c_menuitems={c_categoryItemPhoto}
                 title={c_categoryTitle}
                 Name={c_categoryName}
               />
+            </div>
             </div>
             <div className="gallery-sec">
               <PhotoSlider

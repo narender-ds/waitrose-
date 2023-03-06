@@ -41,6 +41,7 @@ const BannerSlide = (props: bannerData) => {
   };
   return (
     <>
+    <div className="container-custom mx-auto"></div>
       <div className="hero">
         {BackgroundImage?.map((item: any) => {
                return (

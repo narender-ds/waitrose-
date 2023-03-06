@@ -327,10 +327,10 @@ const State: Template<TemplateRenderProps> = ({
 
   return (
     <>
-      <JsonLd<Organization>
+      <JsonLd<Store>
         item={{
           "@context": "https://schema.org",
-          "@type": "Organization",
+          "@type": "Store",
           name: "Waitrose",
           url: "https://www.waitrose.com/international/",
           logo: "https://www.waitrose.com.mx/en-US/images/logos/pji_arch_red_en.png",
