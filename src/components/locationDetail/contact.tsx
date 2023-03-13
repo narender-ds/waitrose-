@@ -55,18 +55,18 @@ const Contact = (props: any) => {
 
         {phone ? (
           <div className="icon-row">
-             <a id="address" className=" location-phn" href={`tel:${phone}`}>
-            <div className="icon">
-              {" "}
-              <img
-                className=" "
-                src={Phonesvg}
-                width="22"
-                height="22"
-                alt="phonesvg"
-              />
-            </div>
-            <div className="content-col">{phone}</div>
+            <a id="address" className=" location-phn" href={`tel:${phone}`}>
+              <div className="icon">
+                {" "}
+                <img
+                  className=" "
+                  src={Phonesvg}
+                  width="22"
+                  height="22"
+                  alt="phonesvg"
+                />
+              </div>
+              <div className="content-col">{phone}</div>
             </a>
           </div>
         ) : (
@@ -128,7 +128,7 @@ const Contact = (props: any) => {
                   title={"Holiday hours"}
                   additionalHoursText={additionalHoursText}
                   hours={hours}
-                                />
+                />
               )}
             </div>
           </div>

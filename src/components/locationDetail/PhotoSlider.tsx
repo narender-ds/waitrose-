@@ -11,7 +11,13 @@ const PhotoSlider = (props: Data) => {
     photos &&
     photos.map((element: any) => (
       <SplideSlide>
-        <img className="Photogalleryimg" height="" width="" src={element.image.url} alt=""/>
+        <img
+          className="Photogalleryimg"
+          height=""
+          width=""
+          src={element.image.url}
+          alt=""
+        />
       </SplideSlide>
     ));
 

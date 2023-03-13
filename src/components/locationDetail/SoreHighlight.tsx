@@ -6,11 +6,11 @@ import { Link } from "@yext/pages/components";
 type Data = {
   storeHighlights: any;
   title: any;
-  name:any;
-  c_localProducts:any;
+  name: any;
+  c_localProducts: any;
 };
 export default function StoreHighlight(props: Data) {
-  const { storeHighlights, title ,name,c_localProducts} = props;
+  const { storeHighlights, title, name, c_localProducts } = props;
   /*for small mobile screens */
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   React.useEffect(() => {
@@ -34,10 +34,14 @@ export default function StoreHighlight(props: Data) {
   return (
     <>
       <div className="container-custom mx-auto">
-       {c_localProducts ? <div className="sec-title">
-          <h2>{"Our HeighLights"} </h2>
-          {/* title */}
-        </div> : ""}
+        {c_localProducts ? (
+          <div className="sec-title">
+            <h2>{"Our HeighLights"} </h2>
+            {/* title */}
+          </div>
+        ) : (
+          ""
+        )}
 
         <div className="services-inner">
           {c_localProducts.map((res: any, i: Number) => {
@@ -64,7 +68,9 @@ export default function StoreHighlight(props: Data) {
                         )}
                       </div>
                       <div className="service-desc-main">
-                        <h3 className="font-lg text-black">{res.productName.label}</h3>
+                        <h3 className="font-lg text-black">
+                          {res.productName.label}
+                        </h3>
                         <div className="service-desc">
                           {res.productDescription}
                         </div>

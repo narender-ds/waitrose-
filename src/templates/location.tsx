@@ -541,10 +541,9 @@ const Location: Template<ExternalApiRenderData> = ({
         <AnalyticsScopeProvider name={""}>
           <PageLayout global={_site}>
             <BannerSlide
-             timezone={timezone}
-             hours={hours}
+              timezone={timezone}
+              hours={hours}
               name={name}
-             
               BackgroundImage={c_bannerPhoto}
               c_cTAForBanner={c_bannerCta}
               c_bannerSlogan={c_bannerSlogan}
@@ -563,19 +562,19 @@ const Location: Template<ExternalApiRenderData> = ({
                 </div>
               </div>
             </div> */}
-             
+
             {/* <BreadCrumbs
               name={name}
               parents={dm_directoryParents}
               address={address}
             ></BreadCrumbs> */}
             <BreadCrumbs
-            name={name}
-            parents={dm_directoryParents}
-            baseUrl={relativePrefixToRoot}
-            address={address}
-          ></BreadCrumbs>
-            
+              name={name}
+              parents={dm_directoryParents}
+              baseUrl={relativePrefixToRoot}
+              address={address}
+            ></BreadCrumbs>
+
             <div className="location-information">
               <Contact
                 address={address}
@@ -627,13 +626,13 @@ const Location: Template<ExternalApiRenderData> = ({
               />
             </div>
             <div className="container-custom mx-auto">
-            <div className="mt-[80px] ">
-              <Services
-                c_menuitems={c_categoryItemPhoto}
-                title={c_categoryTitle}
-                Name={c_categoryName}
-              />
-            </div>
+              <div className="mt-[80px] ">
+                <Services
+                  c_menuitems={c_categoryItemPhoto}
+                  title={c_categoryTitle}
+                  Name={c_categoryName}
+                />
+              </div>
             </div>
             <div className="gallery-sec">
               <PhotoSlider

@@ -111,7 +111,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
           content: `${
             document.c_meta_description
               ? document.c_meta_description
-              : `View Find Pizza Hub Here products at competitive rates.`
+              : `View Find store Here products at competitive rates.`
           }`,
         },
       },

@@ -111,7 +111,7 @@ const renderHours = (week: Week) => {
       return [year, month, day].join("-");
     }
     if (i > 0) {
-      dayDate = new Date(Date.now() + i * 24*  60*  60*  1000);
+      dayDate = new Date(Date.now() + i * 24 * 60 * 60 * 1000);
     }
     a = [{ day: "numeric" }, { month: "long" }, { year: "numeric" }];
     s = join(dayDate, a, " ");
@@ -119,7 +119,7 @@ const renderHours = (week: Week) => {
 
     // week.holidayHours.map((res:any)=>{
     //   if(res.date==formatDate(dayDate)){
-      //   }
+    //   }
     // })
     dayDom.push(
       <DayRow
@@ -214,7 +214,6 @@ const DayRow = (props: DayRow) => {
   let Status = false;
   for (var key in myDataAccordintToMe) {
     if (key.includes(dayDate)) {
-
       Status = true;
       holidayopenintervals.push(myDataAccordintToMe[key]);
     }
@@ -316,7 +315,6 @@ const Hours = (props: Hours) => {
         {hours.holidayHours ? (
           <>
             <Model name="Holiday hours" holidayHours={hours.holidayHours} />
-            
           </>
         ) : (
           ""

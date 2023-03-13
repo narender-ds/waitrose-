@@ -13,10 +13,16 @@ export default function About(props: any) {
         <div className=" py-10">
           <div className="container mx-auto ab-secmain flex flex-wrap items-center">
             <div className="w-full md:w-1/2 px-5">
-              <img style={{ height: "80%", width: "80%" }} src={c_aboutData.aboutImage.url} alt="" />
+              <img
+                style={{ height: "80%", width: "80%" }}
+                src={c_aboutData.aboutImage.url}
+                alt=""
+              />
             </div>
             <div className="w-full md:w-1/2 about-sec px-5">
-              <h3 className="font-bold text-2xl sec_heading">{c_aboutData.aboutTitle}</h3>
+              <h3 className="font-bold text-2xl sec_heading">
+                {c_aboutData.aboutTitle}
+              </h3>
               <p> {c_aboutData.aboutDesciption}</p>
               {/*  */}
               {c_aboutData.aboutCta ? (
@@ -50,7 +56,9 @@ export default function About(props: any) {
                     // conversionDetails={conversionDetails_phone}
                     data-ya-track="seocta"
                   >
-                    {c_aboutData.aboutCta.link?(c_aboutData.aboutCta.label):""}
+                    {c_aboutData.aboutCta.link
+                      ? c_aboutData.aboutCta.label
+                      : ""}
                   </Link>
                 </>
               ) : (

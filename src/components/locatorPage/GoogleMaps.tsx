@@ -528,9 +528,8 @@ function UnwrappedGoogleMaps({
           </div>
           <div className="icon-row content-col address-with-availablity notHighlight">
             <Address address={result.rawData.address} />
-            </div>
-            
-          
+          </div>
+
           {result.rawData.mainPhone ? (
             <div className="icon-row">
               <div className="icon">

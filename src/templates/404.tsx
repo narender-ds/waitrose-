@@ -10,14 +10,12 @@ import * as React from "react";
 import { favicon } from "../../sites-global/global";
 import { StaticData } from "../../sites-global/staticData";
 import PageLayout from "../components/layouts/PageLayout";
-import "../index.css"
-
+import "../index.css";
 
 // The path must be exactly 404.html
 export const getPath: GetPath<TemplateProps> = () => {
   return "404.html";
 };
-
 // Add a title to the page
 export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = () => {
   return {
@@ -30,17 +28,13 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = () => {
           href: favicon,
         },
       },
-    ]
+    ],
   };
 };
 
 // Template that will show as the page
-const FourOhFour: Template<TemplateRenderProps> = ({
-  document,
-}) => {
-  const {
-    _site
-  } = document;
+const FourOhFour: Template<TemplateRenderProps> = ({ document }) => {
+  const { _site } = document;
   return (
     <>
       <PageLayout global={_site}>
@@ -53,12 +47,14 @@ const FourOhFour: Template<TemplateRenderProps> = ({
               <p>{StaticData.cantfind_page}.</p>
               <p>{StaticData.Youcouldtry}</p>
               <div className="button-bx max-w-[45rem] !mx-auto !mt-5">
-                <a className="btn" href="javascript:history.back()">{StaticData.Previuspage} &gt;</a>
-                <a className="btn" href="/">{StaticData.homePage} &gt;</a>
+                <a className="btn" href="javascript:history.back()">
+                  {StaticData.Previuspage} &gt;
+                </a>
+                <a className="btn" href="/">
+                  {StaticData.homePage} &gt;
+                </a>
               </div>
             </div>
-
-
           </div>
         </div>
       </PageLayout>

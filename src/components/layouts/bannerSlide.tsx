@@ -26,7 +26,6 @@ type bannerData = {
 // };
 
 const BannerSlide = (props: bannerData) => {
-
   const {
     name,
     BackgroundImage,
@@ -41,10 +40,10 @@ const BannerSlide = (props: bannerData) => {
   };
   return (
     <>
-    <div className="container-custom mx-auto"></div>
+      <div className="container-custom mx-auto"></div>
       <div className="hero">
         {BackgroundImage?.map((item: any) => {
-               return (
+          return (
             <>
               <img className="hero-img" src={item.url} alt="banner" />
             </>
@@ -63,7 +62,9 @@ const BannerSlide = (props: bannerData) => {
             {c_bannerSlogan.bannerSlogan ? c_bannerSlogan.bannerSlogan : ""}
           </p> */}
           <p>
-            {c_bannerSlogan.bannnerDesciption ? c_bannerSlogan.bannnerDesciption : ""}
+            {c_bannerSlogan.bannnerDesciption
+              ? c_bannerSlogan.bannnerDesciption
+              : ""}
           </p>
           {c_bannerSlogan ? (
             <>

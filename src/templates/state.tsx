@@ -83,10 +83,10 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
     ? document.c_metaDescription
     : "Visit your " +
       document.name +
-      "Get the real Waitrose's taste now – order fresh cooked pizza, sides, drinks and desserts online for delivery or takeaway. Better ingredients. Better pizza";
+      "Get the real Waitrose's taste now – order fresh vegies, sides, drinks and desserts online for delivery or takeaway. Better ingredients. Better eatables";
   let metaTitle = document.c_metaTitle
     ? document.c_metaTitle
-    : "Visit " + document.name + " | Order Pizza: Delivery Or Takeaway | ";
+    : "Visit " + document.name + " | Order Items: Delivery Or Takeaway | ";
 
   return {
     title: metaTitle,

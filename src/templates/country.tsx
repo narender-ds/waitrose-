@@ -5,7 +5,7 @@ import * as React from "react";
 // import BreadCrumbs from "../components/BreadCrumbs";
 import "../index.css";
 // import bannerImage from "../images/app-bg.png";
-import {favicon} from "../../sites-global/global";
+import { favicon } from "../../sites-global/global";
 import { JsonLd } from "react-schemaorg";
 import {
   Template,
@@ -85,7 +85,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
     ? document.c_metaDescription
     : "Visit your " +
       document.name +
-      "Get the real Waitrose's taste now – order fresh cooked pizza, sides, drinks and desserts online for delivery or takeaway. Better ingredients. Better pizza";
+      "Get the real Waitrose's taste now – order fresh vegies, sides, drinks and desserts online for delivery or takeaway. Better ingredients. Better items";
   let metaTitle = document.c_metaTitle
     ? document.c_metaTitle
     : "Visit " + document.name + " | Order Items: Delivery | ";

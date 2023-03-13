@@ -12,6 +12,7 @@ module.exports = {
       'white': '#ffffff',
       'darksgray':"#777777",
       // 'bg-red':"#658725",
+      'mixGreen':"#658725",
       'black': '#000000',
       'Dark-red': '#658725',
       'gray': '#383838',

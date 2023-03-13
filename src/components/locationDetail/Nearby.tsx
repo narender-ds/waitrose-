@@ -68,7 +68,7 @@ export default function Nearby(props: any) {
           return (
             <>
               {/* <SplideSlide key={index}> */}
-             
+
               <div className="nearby-card">
                 <div className="location-name-miles icon-row">
                   <h2>
@@ -94,9 +94,8 @@ export default function Nearby(props: any) {
                 <div className="icon-row content-col">
                   <Address address={location.data.address} />
                 </div>
-                
+
                 <div className="icon-row closeing-div">
-                  
                   {location.data.hours ? (
                     <div
                       className="flex open-now-string items-center "
@@ -146,7 +145,7 @@ export default function Nearby(props: any) {
                     buttonText={
                       props.c_getDirectionsCTAText
                         ? props.c_getDirectionsCTAText
-                        : "GET DIRECTIONS"
+                        : "GET DIRECTION"
                     }
                     address={location.data.address}
                     latitude={
@@ -162,7 +161,7 @@ export default function Nearby(props: any) {
                   />
                 </div>
               </div>
-       
+
               {/* </SplideSlide> */}
             </>
           );

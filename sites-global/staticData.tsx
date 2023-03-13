@@ -1,6 +1,6 @@
 export const StaticData = {
-    Meta_title:" Waitrose - Pizza Hub",
-    Meta_description:"Visit Waitrose | Waitrose is your local great Pizza Hub. Find latest seasonal looks for Women, Men and kids, plus a huge range of homeware.",
+    Meta_title:" Waitrose - Store",
+    Meta_description:"Visit Waitrose | Waitrose is your local Store. Find latest seasonal looks for Women, Men and kids, plus a huge range of homeware.",
     locator_breadcrumb:"Store Locator",
     FindLocationtext:"Find a Location",
     Usemylocation:"Use my location",

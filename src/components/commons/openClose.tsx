@@ -81,7 +81,7 @@ export const OpenStausFunctions = {
             nowTimeNumber < endIntervalNumber
           ) {
             currentInterval = interval;
-          
+
             openRightNow = true;
           }
         }
@@ -110,14 +110,14 @@ export const OpenStausFunctions = {
         if (intervalsTomorrow.length > 0) {
           nextInterval = intervalsTomorrow[0];
           Day = tomorrow.getDay();
-         
+
           nextIsTomorrow = true;
         }
       } else if (intervalsnextTommorow) {
         if (intervalsnextTommorow.length > 0) {
           nextInterval = intervalsnextTommorow[0];
           Day = nextTomorrow.getDay();
-     
+
           nextIsTomorrow = true;
         }
       } else if (
@@ -127,7 +127,7 @@ export const OpenStausFunctions = {
         )
       ) {
         nextTomorrow = new Date(nextTomorrow.getTime() + 86400000);
-      
+
         Day = nextTomorrow.getDay();
         const nextintervals = OpenStausFunctions.getIntervalOnDate(
           nextTomorrow,
@@ -144,7 +144,7 @@ export const OpenStausFunctions = {
         )
       ) {
         nextTomorrow = new Date(nextTomorrow.getTime() + 172800000);
-   
+
         Day = nextTomorrow.getDay();
         const nextintervals = OpenStausFunctions.getIntervalOnDate(
           nextTomorrow,
@@ -171,7 +171,6 @@ export const OpenStausFunctions = {
           nextIsTomorrow = true;
         }
       }
-
     }
 
     const week = [
@@ -187,8 +186,6 @@ export const OpenStausFunctions = {
     const statusclass = "";
 
     if (openRightNow) {
-  
-
       if (
         currentInterval.start === "00:00" &&
         currentInterval.end === "23:59"
@@ -225,7 +222,10 @@ export const OpenStausFunctions = {
           <div className={"closeddot 4"}>
             <div className="red-dot">
               <div className="hours-info ">
-                <span className="font-second-main-font font-bold text-[#000]"> Closed - </span>
+                <span className="font-second-main-font font-bold text-[#000]">
+                  {" "}
+                  Closed -{" "}
+                </span>
                 {"Opens at "}
                 <span className="lowercase">
                   {OpenStausFunctions.formatTime(nextInterval.start).replace(
@@ -243,7 +243,9 @@ export const OpenStausFunctions = {
           <div className={"closeddot 3"}>
             <div className="red-dot">
               <div className="hours-info ">
-                <span className="font-second-main-font font-bold text-[#000] " >Closed - </span>
+                <span className="font-second-main-font font-bold text-[#000] ">
+                  Closed -{" "}
+                </span>
                 {"Opens at "}
                 <span className="lowercase">
                   {OpenStausFunctions.formatTime(nextInterval.start).replace(
@@ -301,7 +303,6 @@ export const OpenStausFunctions = {
     const day = date.getDate();
     const month = date.getMonth() + 1;
     const year = date.getFullYear();
-
     const days = [
       "sunday",
       "monday",
@@ -311,7 +312,6 @@ export const OpenStausFunctions = {
       "friday",
       "saturday",
     ];
-
     const dateString =
       year +
       "-" +

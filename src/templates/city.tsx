@@ -287,44 +287,43 @@ const City: Template<TemplateRenderProps> = ({
               </a>
             </h4>
             <div className="icon-row">
-            <div className="icon">
-              {svgIcons.addressPin}
-              </div>
+              <div className="icon">{svgIcons.addressPin}</div>
               <div className="content-col">
-              <p>
-                {entity.address.line1 ? entity.address.line1 : ""},{" "}
-                {entity.address.line2 ? entity.address.line2 : ""}
-                <br /> {entity.address.city ? entity.address.city : ""},{" "}
-                {entity.address.postalCode ? entity.address.postalCode : ""},{" "}
-                <br />
-                {entity.address.countryCode
-                  ? regionNames.of(entity.address.countryCode)
-                  : ""}{" "}
-                <br />
-              </p>
-            </div>
+                <p>
+                  {entity.address.line1 ? entity.address.line1 : ""},{" "}
+                  {entity.address.line2 ? entity.address.line2 : ""}
+                  <br /> {entity.address.city ? entity.address.city : ""},{" "}
+                  {entity.address.postalCode ? entity.address.postalCode : ""},{" "}
+                  <br />
+                  {entity.address.countryCode
+                    ? regionNames.of(entity.address.countryCode)
+                    : ""}{" "}
+                  <br />
+                </p>
+              </div>
             </div>
             {/* {what3WordsAddressString} */}
             {entity.mainPhone ? (
               <>
-              <div className="icon-row">
-             <a id="address" className=" location-phn" href={`tel:${entity.mainPhone}`}>
-             <div className="icon">
-                  {svgIcons.phoneIcon}
-                  </div>
-                  <div className="content-col">
-                  <p>
-                    <Link
-                      href={`tel:${entity.mainPhone}`}
-                      rel="noopener noreferrer"
-                      eventName={`phone`}
-                    >
-                      {entity.mainPhone}
-                    </Link>
-                  </p>
-                  </div>
-                
-                </a>
+                <div className="icon-row">
+                  <a
+                    id="address"
+                    className=" location-phn"
+                    href={`tel:${entity.mainPhone}`}
+                  >
+                    <div className="icon">{svgIcons.phoneIcon}</div>
+                    <div className="content-col">
+                      <p>
+                        <Link
+                          href={`tel:${entity.mainPhone}`}
+                          rel="noopener noreferrer"
+                          eventName={`phone`}
+                        >
+                          {entity.mainPhone}
+                        </Link>
+                      </p>
+                    </div>
+                  </a>
                 </div>
               </>
             ) : (
@@ -353,7 +352,7 @@ const City: Template<TemplateRenderProps> = ({
               >
                 {svgIcons.viewDetails} View Details
               </Link>
-            </div>  
+            </div>
           </div>
         </div>
       );
@@ -436,11 +435,11 @@ const City: Template<TemplateRenderProps> = ({
               address={""}
             /> */}
             <BreadCrumbs
-            name={name}
-            parents={dm_directoryParents}
-            baseUrl={relativePrefixToRoot}
-            address={""}
-          ></BreadCrumbs>
+              name={name}
+              parents={dm_directoryParents}
+              baseUrl={relativePrefixToRoot}
+              address={""}
+            ></BreadCrumbs>
             {/* <Banner
                   Name={document.dm_directoryParents ? document.dm_directoryParents : []}
                   TagLine={""}

@@ -6,21 +6,21 @@ function Menu(props: any) {
   return (
     <>
       <ul className="primary-nav">
-        {props.c_matalanMenu && props.c_matalanMenu.c_header_links.map((item: any, i: Number) => {
-          return (
-            <>
-            <ul>
-              <li>
-              <Link props={item} />
-              </li>
-              </ul>
-            </>
-          )
-        })}
-
+        {props.c_matalanMenu &&
+          props.c_matalanMenu.c_header_links.map((item: any, i: Number) => {
+            return (
+              <>
+                <ul>
+                  <li>
+                    <Link props={item} />
+                  </li>
+                </ul>
+              </>
+            );
+          })}
       </ul>
     </>
-  )
+  );
 }
 
-export default Menu
+export default Menu;

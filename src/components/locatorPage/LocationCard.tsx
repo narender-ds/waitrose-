@@ -107,18 +107,22 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
             {result.rawData.mainPhone ? (
               <div className="icon-row">
                 <h6>Telephone</h6>
-                <Link id="address" className=" location-phn" href={`tel:${result.rawData.mainPhone}`}>
-                <div className="icon">
-                  {" "}
-                  <img
-                    className=" "
-                    src={Phonesvg}
-                    width="22"
-                    height="22"
-                    alt="phonesvg"
-                  />
-                </div>
-                <div className="content-col">{result.rawData.mainPhone}</div>
+                <Link
+                  id="address"
+                  className=" location-phn"
+                  href={`tel:${result.rawData.mainPhone}`}
+                >
+                  <div className="icon">
+                    {" "}
+                    <img
+                      className=" "
+                      src={Phonesvg}
+                      width="22"
+                      height="22"
+                      alt="phonesvg"
+                    />
+                  </div>
+                  <div className="content-col">{result.rawData.mainPhone}</div>
                 </Link>
               </div>
             ) : (
@@ -127,7 +131,6 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
             {/* {console.log('result.rawData.hours',result.rawData.hours?.reopenDate)} */}
             {result.rawData.hours ? (
               <>
-                
                 <div className="icon-row">
                   <h6>Opening Hours</h6>
                   {result.rawData.hours?.reopenDate ? (
@@ -152,7 +155,7 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
                     </>
                   ) : (
                     <>
-                        <div className="icon">
+                      <div className="icon">
                         {" "}
                         <img
                           className=" "
@@ -172,15 +175,23 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
                           hours={result.rawData.hours}
                           deliveryHours={result.rawData.hours}
                         ></OpenClose>
-                         <div dangerouslySetInnerHTML={{ __html: Openclose }} />
+                        <div dangerouslySetInnerHTML={{ __html: Openclose }} />
                       </div>
                     </>
                   )}
 
-                  <div className={`storelocation-openCloseTime  capitalize hidden`}>
-                    {typeof result.rawData.hours === "undefined" ? ("") :
-                      <Hours key={result.rawData.name} additionalHoursText={result.rawData.additionalHoursText} hours={result.rawData.hours} />
-                    }
+                  <div
+                    className={`storelocation-openCloseTime  capitalize hidden`}
+                  >
+                    {typeof result.rawData.hours === "undefined" ? (
+                      ""
+                    ) : (
+                      <Hours
+                        key={result.rawData.name}
+                        additionalHoursText={result.rawData.additionalHoursText}
+                        hours={result.rawData.hours}
+                      />
+                    )}
                   </div>
                 </div>
               </>
