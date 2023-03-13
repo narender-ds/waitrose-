@@ -214,7 +214,7 @@ const Country: Template<TemplateRenderProps> = ({
 }) => {
   let templateData = { document: document, __meta: __meta };
 
-  const { dm_directoryChildren, dm_directoryParents } = document;
+  const { dm_directoryChildren, dm_directoryParents,slug } = document;
 
   const { name, _site } = document;
   // console.log( dm_directoryChildren,'jgdhrjgf')
@@ -231,34 +231,92 @@ const Country: Template<TemplateRenderProps> = ({
   //     </div>
   //   );
   // });
-  var slug = "";
-  const childrenDivs =
-    dm_directoryChildren &&
-    dm_directoryChildren?.map((entity: any) => {
-      if (entity?.dm_directoryChildrenCount == 1) {
-        entity.dm_directoryChildren?.map((i: any) => {
-          i.dm_directoryChildren?.map((e: any) => {
-            slug = e.slug + ".html";
-          });
+
+    console.log(document.slug,"shubham")
+  // console.log(document.dm_directoryParents[1].slug,"ejdmgdvhbdkgdafgzdfj")
+  // console.log(document.dm_directoryChildren[1].slug,"ejdmgdvhbdkgdafgzdfj")
+  // console.log(document.dm_directoryChildren,"ejdmgdvhbdkgdafgzdfj")
+  // console.log(links,"gdff")
+  // console.log('document.dm_directoryParents[1].slug + document.dm_directoryChildren[1].slug;', document.dm_directoryParents[1].slug , document.dm_directoryChildren[1].slug)
+  
+  // var slug = "";
+  // const childrenDivs =
+  //   dm_directoryChildren &&
+  //   dm_directoryChildren?.map((entity: any) => {
+  //     if (entity?.dm_directoryChildrenCount == 1) {
+  //       entity.dm_directoryChildren?.map((i: any) => {
+  //         i.dm_directoryChildren?.map((e: any) => {
+  //           slug = slug = "/" + document.slug + "/" + entity.slug+"/" + e.slug + ".html";
+  //         });
+  //       });
+  //       return (
+  //         <div className="w-1/2 storelocation-category md:w-1/3 lg:w-1/4 px-4">
+  //           <a key={entity.slug} href={slug} className="hover:text-red">
+  //             {entity.name} ({entity.dm_directoryChildrenCount})
+  //           </a>
+  //         </div>
+  //       );
+  //     } else {
+  //       let slug = "/" + document.slug + "/" + entity.slug + ".html";
+  const childrenDivs = dm_directoryChildren ? dm_directoryChildren.map((entity: any) => {
+    let detlslug;
+
+
+    if (typeof entity.dm_directoryChildren != "undefined") {
+      if (entity.dm_directoryChildrenCount == 1) {
+        entity.dm_directoryChildren.map((res: any) => {
+          // console.log(res,"jhgsvhfvbfb")
+          let detlslug1 = "";
+
+          if (!res.slug) {
+            let slugString = res.id + " " + res.name;
+            let slug = slugString;
+            detlslug1 = `${slug}.html`;
+          } else {
+            detlslug1 = `${res.slug.toString()}.html`;
+          }
+          //console.log(detlslug1,"detlslug1")
+          
+
+
+          res.dm_directoryChildren ? res.dm_directoryChildren.map((detl: any) => {
+
+            if (!detl.slug) {
+              let slugString = detl.id + " " + detl.name;
+              let slug = slugString;
+              detlslug1 = `${slug}.html`;
+            } else {
+              // detlslug1 = `${detl.slug.toString()}.html`;
+              detlslug1=slug+"/"+entity.slug+"/"+res.slug+"/"+detl.slug.toString()+".html"
+             // console.log(detlslug1,"1234554")
+            }
+
+            detlslug = detlslug1;
+
+          }) : detlslug = detlslug1;
+
+
         });
-        return (
-          <div className="w-1/2 storelocation-category md:w-1/3 lg:w-1/4 px-4">
-            <a key={entity.slug} href={slug} className="hover:text-red">
-              {entity.name} ({entity.dm_directoryChildrenCount})
-            </a>
-          </div>
-        );
-      } else {
-        let slug = "/" + document.slug + "/" + entity.slug + ".html";
-        return (
-          <div className="w-1/2 storelocation-category md:w-1/3 lg:w-1/4 px-4 test">
-            <a key={entity.slug} href={slug} className="hover:text-red">
-              {entity.name} ({entity.dm_directoryChildrenCount})
-            </a>
-          </div>
-        );
       }
-    });
+      else {
+        detlslug = slug + "/" + entity.slug + ".html";
+        // console.log(detlslug,"dghgdjghjgd")
+      }
+    }
+
+    
+
+    return (
+      <p className=" storelocation-category">
+        <a
+          key={entity.slug}
+          href={detlslug}
+        >
+          {entity.name} ({entity.dm_directoryChildrenCount})
+        </a>
+      </p>
+    )
+  }) : null;
   let breadcrumbScheme = [];
 
   breadcrumbScheme.push({

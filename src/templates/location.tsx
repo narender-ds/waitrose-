@@ -143,17 +143,17 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
   var name: any = document.name.toLowerCase();
   var string: any = name.toString();
   let result: any = string.replaceAll(" ", "-");
-  // document.dm_directoryParents.map((result: any, i: Number) => {
-  //   if (i > 0) {
-  //     url += result.slug + "/"
-  //   }
-  // })
+  document.dm_directoryParents.map((result: any, i: Number) => {
+    if (i > 0) {
+      url += result.slug + "/"
+    }
+  })
   if (!document.slug) {
     url += `${result}.html`;
   } else {
     url += `${document.slug.toString()}.html`;
   }
-
+console.log('url', url)
   return url;
 };
 /**

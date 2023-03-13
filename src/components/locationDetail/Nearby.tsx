@@ -3,14 +3,6 @@ import ApiCall from "../../Apis/ApiCall";
 import Address from "../commons/Address";
 import GetDirection from "../commons/GetDirection";
 import OpenClose from "../commons/openClose";
-import timesvg from "../../images/watch-icn.svg";
-import mapimage from "../../images/map.svg";
-import Phonesvg from "../../images/phone.svg";
-import {
-  Addresssvg,
-  mobilesvg,
-  View_Store,
-} from "../../../sites-global/global";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { Link } from "@yext/pages/components";
 
@@ -49,6 +41,9 @@ export default function Nearby(props: any) {
       > */}
       {neabyData.map((location: any, index: Number) => {
         let url = "";
+        var country :any=location.data.address.countryCode?.toLowerCase();
+        var initialcountry: any = country.toString();
+        var finalcountry: any = initialcountry.replaceAll(" ", "-");
         var name: any = location.data.name?.toLowerCase();
         var region: any = location.data.address.region?.toLowerCase();
         var initialregion: any = region.toString();
@@ -58,10 +53,12 @@ export default function Nearby(props: any) {
         var finalcity: any = initialrcity.replaceAll(" ", "-");
         var string: any = name.toString();
         let result1: any = string.replaceAll(" ", "-");
+        var links:any=finalcountry+"/"+finalregion+"/"+ finalcity+"/"+ location.data.id;
+
         if (!location.data.slug) {
           url = `/${location.data.id}-${result1}.html`;
         } else {
-          url = `/${location.data.slug.toString()}.html`;
+          url = `/${links}.html`;
         }
 
         if (index > 0) {

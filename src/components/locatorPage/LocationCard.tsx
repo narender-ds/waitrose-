@@ -43,21 +43,26 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
   }
 
   const { address } = result.rawData;
-  //     var name: any = result.rawData.name?.toLowerCase();
-  //   var region: any = result.rawData.address.region?.toLowerCase();
-  //   var initialregion: any = region.toString();
-  //   var finalregion: any = initialregion.replaceAll(" ", "-");
-  //   var city: any = result.rawData.address.city?.toLowerCase();
-  //   var initialrcity: any = city.toString();
-  //   var finalcity: any = initialrcity.replaceAll(" ", "-");
-  //   var string: any = name.toString();
-  //   let result1: any = string.replaceAll(" ", "-");
-  //  if (!result.rawData.slug) {
-  //    url= `/${result.rawData.id}-${result1}.html`;
-  //  } else {
-  //    url= `/${result.rawData.slug.toString()}.html`;
-  //  }
-
+  // let url = "";
+  var country :any=result.rawData.address.countryCode?.toLowerCase();
+  var initialcountry: any = country.toString();
+    var finalcountry: any = initialcountry.replaceAll(" ", "-");
+    var name: any = result.rawData.name?.toLowerCase();
+    var region: any = result.rawData.address.region?.toLowerCase();
+    var initialregion: any = region.toString();
+    var finalregion: any = initialregion.replaceAll(" ", "-");
+    var city: any = result.rawData.address.city?.toLowerCase();
+    var initialrcity: any = city.toString();
+    var finalcity: any = initialrcity.replaceAll(" ", "-");
+    var string: any = name.toString();
+    let result1: any = string.replaceAll(" ", "-");
+    var links:any=finalcountry+"/"+finalregion+"/"+ finalcity+"/"+ result.rawData.id;
+    if (!result.rawData.slug) {
+      url = `${links}.html`;
+    } else {
+      url = `${links}.html`;
+    }
+    console.log('finalcity', finalcity)
   return (
     <div
       className={`location result-list-inner-${result.id} result`}
@@ -86,7 +91,7 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
                   data-ya-track={`viewDetail -${result.rawData.name}`}
                   eventName={`viewDetail -${result.rawData.name}`}
                   rel="noopener noreferrer"
-                  href={`/${result.rawData.slug}.html`}
+                  href={url}
                 >
                   {result.rawData.name}
                 </Link>
@@ -243,7 +248,7 @@ const LocationCard: CardComponent<Location> = ({ result }) => {
             <div className="button-bx">
               <Link
                 type="button"
-                href={`/${result.rawData.slug}.html`}
+                href={url}
                 className=" btn notHighlight "
                 data-ya-track={`viewStore -${result.rawData.name}`}
                 eventName={`viewStore -${result.rawData.name}`}

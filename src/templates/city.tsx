@@ -241,12 +241,21 @@ const City: Template<TemplateRenderProps> = ({
     c_metaDescription,
     c_metaTitle,
     _site,
+    slug
   } = document;
-
+    console.log(document.slug,"shubham")
+  console.log(document.dm_directoryParents[1].slug,"ejdmgdvhbdkgdafgzdfj")
+  console.log(document.dm_directoryParents[2].slug,"ejdmgdvhbdkgdafgzdfj")
+  // console.log(document.dm_directoryChildren[1].slug,"ejdmgdvhbdkgdafgzdfj")
+  // console.log(document.dm_directoryChildren,"ejdmgdvhbdkgdafgzdfj")
+  // console.log(links,"gdff")
+  // console.log('document.dm_directoryParents[1].slug + document.dm_directoryChildren[1].slug;', document.dm_directoryParents[1].slug , document.dm_directoryChildren[1].slug)
+  
+var links=dm_directoryParents[1].slug+"/"+dm_directoryParents[2].slug+"/"+document.slug;
   let templateData = { document: document, __meta: __meta };
 
   const regionNames = new Intl.DisplayNames(["en"], { type: "region" });
-
+ 
   const childrenDivs =
     dm_directoryChildren &&
     dm_directoryChildren?.map((entity: any) => {
@@ -266,7 +275,7 @@ const City: Template<TemplateRenderProps> = ({
         // console.log('slug', slug);
         url = `${slug}.html`;
       } else {
-        url = `${entity.slug?.toString()}.html`;
+        url = links+"/"+`${entity.slug?.toString()}.html`;
       }
 
       // const what3WordsAddressString = entity.what3WordsAddress ? (
